@@ -103,28 +103,72 @@
 
 ---
 
-### Project Overview🪟
+---
 
-Over UI :
-<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/841e5b0f-ecd5-4a78-8edc-f582ee3a2b6e" />
+## 🖥 Project Overview
 
-Live UI:
-<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/713d5030-55c7-451c-ad07-55f90e50f68c" />
+<div align="center">
 
-History UI:
-<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/e66c048e-59a0-4292-b618-c1dc9e2f9421" />
+<table>
+<tr>
+<td align="center" width="50%">
 
-Analytics UI:
-<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/0c303926-4acf-4d48-a746-e91a46e7ce4e" />
+### 🏠 Fleet Overview
+*All 10 vehicles at a glance — live sensor values, health scores, active anomalies*
 
-LiveMap:
-<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/94e6c2cf-a191-489e-addf-9df45dc97a78" />
+<img width="960" alt="Fleet Overview" src="https://github.com/user-attachments/assets/841e5b0f-ecd5-4a78-8edc-f582ee3a2b6e" />
 
-Maintenance UI:
-<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/3382052d-85df-4b9a-b9db-1cc4991cfaf9" />
+</td>
+<td align="center" width="50%">
 
+### 📡 Live Monitor
+*Per-vehicle deep dive — sensor charts updating every 100ms via WebSocket*
 
+<img width="960" alt="Live Monitor" src="https://github.com/user-attachments/assets/713d5030-55c7-451c-ad07-55f90e50f68c" />
 
+</td>
+</tr>
+<tr>
+<td align="center" width="50%">
+
+### 📋 Anomaly History
+*Full log with filtering, acknowledge, resolve, and comment threads*
+
+<img width="960" alt="Anomaly History" src="https://github.com/user-attachments/assets/e66c048e-59a0-4292-b618-c1dc9e2f9421" />
+
+</td>
+<td align="center" width="50%">
+
+### 📊 Analytics
+*Fleet-wide heatmap, fault type distribution, vehicle performance trends*
+
+<img width="960" alt="Analytics" src="https://github.com/user-attachments/assets/0c303926-4acf-4d48-a746-e91a46e7ce4e" />
+
+</td>
+</tr>
+<tr>
+<td align="center" width="50%">
+
+### 🗺 Live Fleet Map
+*Vehicles move with real speed data — fault vehicles pulse red on the map*
+
+<img width="960" alt="Live Map" src="https://github.com/user-attachments/assets/94e6c2cf-a191-489e-addf-9df45dc97a78" />
+
+</td>
+<td align="center" width="50%">
+
+### 🔧 Maintenance Log
+*Timeline of repairs linked to anomalies — cost tracking per vehicle*
+
+<img width="960" alt="Maintenance Log" src="https://github.com/user-attachments/assets/3382052d-85df-4b9a-b9db-1cc4991cfaf9" />
+
+</td>
+</tr>
+</table>
+
+</div>
+
+---
 
 
 
