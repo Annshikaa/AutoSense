@@ -37,6 +37,7 @@
 
 - [System Architecture](#-system-architecture)
 - [Project Overview](#-project-overview)
+- [Domain Coverage](#-Domain-coverage)
 - [Features](#-features)
 - [Tech Stack](#-tech-stack)
 - [Getting Started](#-getting-started)
