@@ -36,7 +36,7 @@
 ## Table of Contents
 
 - [System Architecture](#-system-architecture)
-- [Project Rating](#-project-rating)
+- [Project Overview](#-project-overview)
 - [Features](#-features)
 - [Tech Stack](#-tech-stack)
 - [Getting Started](#-getting-started)
