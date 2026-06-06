@@ -1,0 +1,6 @@
+numpy>=1.26.0
+scikit-learn>=1.4.0
+colorama>=0.4.6
+httpx>=0.27.0
+# PyTorch — optional, LSTM falls back to NumPy AR(1) without it
+# torch>=2.2.0
