@@ -103,26 +103,7 @@
 
 ---
 
-## ⭐ Project Rating
 
-```
-╔══════════════════════════════════════════════════════════════════╗
-║                    AutoSense — Scorecard                         ║
-╠══════════════════╦═══════════╦══════════════════════════════════╣
-║  Criteria        ║   Score   ║  Why                             ║
-╠══════════════════╬═══════════╬══════════════════════════════════╣
-║  Architecture    ║  10 / 10  ║  5-layer microservice system     ║
-║  AI / ML Depth   ║   9 / 10  ║  Dual models, real inference     ║
-║  Backend         ║  10 / 10  ║  Async FastAPI, Redis, WS, Auth  ║
-║  Frontend        ║   9 / 10  ║  Live charts, map, dark mode     ║
-║  Embedded Layer  ║  10 / 10  ║  Real C++17, threads, sockets    ║
-║  Real-Time       ║  10 / 10  ║  Sub-100ms end-to-end latency    ║
-║  Code Quality    ║   9 / 10  ║  Modular, typed, documented      ║
-║  DevOps          ║   9 / 10  ║  Docker Compose, env config      ║
-╠══════════════════╬═══════════╬══════════════════════════════════╣
-║  OVERALL         ║  9.5 / 10 ║  Senior-level portfolio project  ║
-╚══════════════════╩═══════════╩══════════════════════════════════╝
-```
 
 ### Domain Coverage
 
