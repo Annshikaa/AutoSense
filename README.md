@@ -1,26 +1,34 @@
 <div align="center">
+
+<pre>
  █████╗ ██╗   ██╗████████╗ ██████╗ ███████╗███████╗███╗   ██╗███████╗███████╗
 ██╔══██╗██║   ██║╚══██╔══╝██╔═══██╗██╔════╝██╔════╝████╗  ██║██╔════╝██╔════╝
 ███████║██║   ██║   ██║   ██║   ██║███████╗█████╗  ██╔██╗ ██║███████╗█████╗  
 ██╔══██║██║   ██║   ██║   ██║   ██║╚════██║██╔══╝  ██║╚██╗██║╚════██║██╔══╝  
 ██║  ██║╚██████╔╝   ██║   ╚██████╔╝███████║███████╗██║ ╚████║███████║███████╗
 ╚═╝  ╚═╝ ╚═════╝    ╚═╝    ╚═════╝ ╚══════╝╚══════╝╚═╝  ╚═══╝╚══════╝╚══════╝
-Edge AI · Vehicle Anomaly Detection · Real-Time Full Stack System
+</pre>
 
-Show Image
-Show Image
-Show Image
-Show Image
-Show Image
-Show Image
-Show Image
-Show Image
+### Edge AI · Vehicle Anomaly Detection · Real-Time Full Stack System
 
+---
 
-AutoSense is a production-grade, real-time vehicle health monitoring system.
-A C++ ECU simulator streams live sensor telemetry over UDP to a Python edge-AI pipeline
-running dual-model anomaly detection — which forwards results to a FastAPI backend
-and a live React dashboard updated instantly via WebSocket.
+![C++](https://img.shields.io/badge/C++17-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
+![Python](https://img.shields.io/badge/Python_3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![React](https://img.shields.io/badge/React_18-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+
+---
+
+> **AutoSense** is a production-grade, real-time vehicle health monitoring system.
+> A C++ ECU simulator streams live sensor telemetry over UDP to a Python edge-AI pipeline
+> running dual-model anomaly detection — which forwards results to a FastAPI backend
+> and a live React dashboard updated instantly via WebSocket.
+
 ---
 
 </div>
@@ -29,7 +37,7 @@ and a live React dashboard updated instantly via WebSocket.
 
 - [System Architecture](#-system-architecture)
 - [Project Overview](#-project-overview)
-- [Domain Coverage](#-Domain-coverage)
+- [Project Rating](#-project-rating)
 - [Features](#-features)
 - [Tech Stack](#-tech-stack)
 - [Getting Started](#-getting-started)
@@ -93,8 +101,6 @@ and a live React dashboard updated instantly via WebSocket.
 | **Edge AI** | Python, scikit-learn, Keras | Dual-model anomaly detection with rolling buffer and severity scoring |
 | **Backend** | FastAPI, SQLAlchemy async, PostgreSQL, Redis | REST API + WebSocket hub + alert dispatch + full persistence |
 | **Frontend** | React 18, Vite, TailwindCSS v4, Recharts | Real-time dashboard with live charts, map, anomaly workflows |
-
----
 
 ---
 
@@ -163,20 +169,18 @@ and a live React dashboard updated instantly via WebSocket.
 
 ---
 
-
-
-### Domain Coverage
+## ⭐ Domain Coverage
 
 ```
   Embedded Systems  ████████████████████  100%
   AI / ML           ████████████████░░░░   90%
   Backend Eng.      ████████████████████  100%
   Full Stack        ████████████████░░░░   90%
-  DevOps            ████████████████░░░░   85%
+  DevOps            █████████████████░░░   85%
   Real-Time Systems ████████████████████  100%
 ```
 
-> This project targets roles in **SDE**, **ML Engineer**, **Embedded Software Engineer**,  
+> This project targets roles in **SDE**, **ML Engineer**, **Embedded Software Engineer**,
 > **Backend Engineer**, and **IoT Engineer** — simultaneously.
 
 ---
@@ -298,40 +302,27 @@ cp .env.example .env
 # Edit .env with your DB credentials and optional SMTP/Twilio settings
 ```
 
----
-
 ### 2 — Database Setup
 
 ```bash
-# Create database and user
 psql -U postgres -c "CREATE DATABASE autosense;"
 psql -U postgres -c "CREATE USER autosense WITH PASSWORD 'yourpassword';"
 psql -U postgres -c "GRANT ALL PRIVILEGES ON DATABASE autosense TO autosense;"
-
-# Run schema migrations
 psql -U autosense -d autosense -f backend/database/migrations/init.sql
 ```
-
----
 
 ### 3 — Backend
 
 ```bash
 cd backend
 python -m venv .venv
-
-# Windows
-.venv\Scripts\activate
-# macOS / Linux
-source .venv/bin/activate
-
+.venv\Scripts\activate        # Windows
+source .venv/bin/activate     # macOS / Linux
 pip install -r requirements.txt
 uvicorn main:app --reload --port 8000
 ```
 
 > Swagger UI → `http://localhost:8000/docs`
-
----
 
 ### 4 — Frontend
 
@@ -342,22 +333,14 @@ npm run dev
 # Opens at http://localhost:5173
 ```
 
----
-
 ### 5 — Edge AI
 
 ```bash
 cd edge-ai
 pip install -r requirements.txt
-
-# Train models on synthetic data (one-time setup)
-python training/train.py
-
-# Start UDP receiver + inference pipeline
-python test_receiver.py
+python training/train.py       # one-time model training
+python test_receiver.py        # start inference pipeline
 ```
-
----
 
 ### 6 — ECU Simulator (C++)
 
@@ -365,25 +348,17 @@ python test_receiver.py
 cd ecu-simulator
 cmake -B build
 cmake --build build --config Release
-
-# Windows
-./build/Release/ecu-simulator.exe
-
-# Linux / macOS
-./build/ecu-simulator
+./build/Release/ecu-simulator.exe   # Windows
+./build/ecu-simulator               # Linux / macOS
 ```
-
-> Simulator sends packets to `127.0.0.1:9000` by default.
-
----
 
 ### Run Order
 
 ```
 Terminal 1  →  PostgreSQL + Redis (Docker or local)
-Terminal 2  →  cd backend   && uvicorn main:app --reload --port 8000
-Terminal 3  →  cd edge-ai   && python test_receiver.py
-Terminal 4  →  cd frontend  && npm run dev
+Terminal 2  →  cd backend        && uvicorn main:app --reload --port 8000
+Terminal 3  →  cd edge-ai        && python test_receiver.py
+Terminal 4  →  cd frontend       && npm run dev
 Terminal 5  →  cd ecu-simulator/build && ./autosense_ecu
 ```
 
@@ -398,7 +373,6 @@ Terminal 5  →  cd ecu-simulator/build && ./autosense_ecu
 | 🚌 Bus | `bus_01` – `bus_03` | 700 – 3000 | 88 – 100°C | `door_status` (0/1) |
 | 🚑 Ambulance | `ambulance_01` | 800 – 5000 | 85 – 95°C | `siren_active` (0/1) |
 
-Each vehicle type has distinct fault injection probabilities:
 - **Trucks** fault more on temperature (heavy load stress)
 - **Buses** fault more on battery (high electrical load)
 - **Ambulances** fault rarely, but severity is always CRITICAL or FATAL
@@ -420,7 +394,7 @@ Trained on 10,000 synthetic normal readings with gaussian noise
 Input  →  last 50 timesteps × 5 features  (shape: 50, 5)
 Model  →  LSTM encoder → LSTM decoder → reconstruction
 Output →  mean squared reconstruction error per sensor
-High error = sequence doesn't match learned normal patterns
+High error = sequence does not match learned normal patterns
 Catches gradual failures that point-based models miss
 ```
 
@@ -481,23 +455,18 @@ else:                                       severity = "normal"
 
 ## 📨 WebSocket Events
 
-All events broadcast as JSON to every connected client:
-
 ```jsonc
-// 🔵 Sensor reading — every ~100ms per vehicle
+// Sensor reading — every ~100ms per vehicle
 {
   "type": "sensor_reading",
   "vehicle_id": "car_01",
   "vehicle_type": "car",
-  "sensors": {
-    "rpm": 2340, "speed": 67.2,
-    "temperature": 91.4, "throttle": 34.1, "battery": 13.2
-  },
+  "sensors": { "rpm": 2340, "speed": 67.2, "temperature": 91.4, "throttle": 34.1, "battery": 13.2 },
   "fault_active": false,
   "fault_type": null
 }
 
-// 🔴 New anomaly detected
+// New anomaly detected
 {
   "type": "anomaly_detected",
   "anomaly_id": "uuid",
@@ -505,23 +474,14 @@ All events broadcast as JSON to every connected client:
   "anomaly_type": "HIGH_TEMPERATURE",
   "severity": "critical",
   "if_score": -0.24,
-  "lstm_error": 118.5,
-  "sensor_values": { ... }
+  "lstm_error": 118.5
 }
 
-// 🟡 Anomaly acknowledged
-{
-  "type": "anomaly_acknowledged",
-  "anomaly_id": "uuid",
-  "acknowledged_by": "Alice"
-}
+// Anomaly acknowledged
+{ "type": "anomaly_acknowledged", "anomaly_id": "uuid", "acknowledged_by": "Alice" }
 
-// 🟢 Anomaly resolved
-{
-  "type": "anomaly_resolved",
-  "anomaly_id": "uuid",
-  "resolved_by": "Bob"
-}
+// Anomaly resolved
+{ "type": "anomaly_resolved", "anomaly_id": "uuid", "resolved_by": "Bob" }
 ```
 
 ---
@@ -542,77 +502,56 @@ All events broadcast as JSON to every connected client:
 
 ```
 autosense/
-│
-├── 🔧 ecu-simulator/               C++ embedded layer
+├── 🔧 ecu-simulator/
 │   ├── src/                        Sensor + vehicle source files
 │   ├── include/                    Headers
 │   ├── main.py                     Python orchestrator
 │   └── CMakeLists.txt
-│
-├── 🧠 edge-ai/                     AI / ML inference layer
+├── 🧠 edge-ai/
 │   ├── training/train.py           Train IsolationForest + LSTM
 │   ├── models/
 │   │   ├── isolation_forest.py
 │   │   └── lstm_model.py
 │   ├── inference/
-│   │   ├── anomaly_detector.py     Combined scoring + thresholds
+│   │   ├── anomaly_detector.py
 │   │   └── predictor.py
 │   └── utils/
-│       ├── udp_receiver.py         Async UDP packet listener
-│       └── data_buffer.py          Sliding window buffer
-│
-├── ⚙️  backend/                    FastAPI backend
-│   ├── main.py                     App entry point
-│   ├── api/
-│   │   ├── routes/
-│   │   │   ├── sensors.py
-│   │   │   ├── anomalies.py        Full anomaly lifecycle
-│   │   │   ├── vehicles.py
-│   │   │   ├── maintenance.py
-│   │   │   └── analytics.py
-│   │   ├── websocket.py            /ws endpoint
-│   │   └── websocket_manager.py    Connection pool + broadcast
+│       ├── udp_receiver.py
+│       └── data_buffer.py
+├── ⚙️  backend/
+│   ├── main.py
+│   ├── api/routes/
+│   │   ├── sensors.py
+│   │   ├── anomalies.py
+│   │   ├── vehicles.py
+│   │   ├── maintenance.py
+│   │   └── analytics.py
 │   ├── database/
-│   │   ├── models.py               SQLAlchemy ORM models
-│   │   ├── connection.py           Async engine + sessions
-│   │   └── migrations/
-│   │       └── init.sql            Canonical schema
-│   ├── models/
-│   │   └── schemas.py              Pydantic v2 schemas
+│   │   ├── models.py
+│   │   ├── connection.py
+│   │   └── migrations/init.sql
+│   ├── models/schemas.py
 │   └── services/
-│       ├── alert_service.py        Email + SMS dispatch
-│       └── notification_rules.py   Cooldowns + deduplication
-│
-├── 📊 frontend/                    React dashboard
-│   └── src/
-│       ├── context/
-│       │   ├── ThemeContext.jsx    Dark/light toggle
-│       │   └── WebSocketContext.jsx Live data + audio
-│       ├── pages/
-│       │   ├── Overview.jsx        Fleet overview
-│       │   ├── LiveMonitor.jsx     Per-vehicle deep dive
-│       │   ├── AnomalyHistory.jsx  Full anomaly log
-│       │   ├── Analytics.jsx       Charts + heatmap
-│       │   ├── VehicleManage.jsx   Vehicle CRUD
-│       │   ├── Maintenance.jsx     Maintenance timeline
-│       │   └── LiveMap.jsx         Simulated fleet map
-│       ├── components/
-│       │   ├── layout/Navbar.jsx
-│       │   ├── dashboard/
-│       │   │   ├── VehicleCard.jsx
-│       │   │   └── AnomalyFeed.jsx
-│       │   ├── charts/
-│       │   │   ├── SensorLineChart.jsx
-│       │   │   └── VehicleHealthGauge.jsx
-│       │   └── ui/
-│       │       ├── Modal.jsx
-│       │       ├── Badge.jsx
-│       │       └── Card.jsx
-│       ├── hooks/
-│       │   ├── useAnomalies.js
-│       │   └── useWebSocket.js
-│       └── services/api.js         Axios wrapper
-│
+│       ├── alert_service.py
+│       └── notification_rules.py
+├── 📊 frontend/src/
+│   ├── context/
+│   │   ├── ThemeContext.jsx
+│   │   └── WebSocketContext.jsx
+│   ├── pages/
+│   │   ├── Overview.jsx
+│   │   ├── LiveMonitor.jsx
+│   │   ├── AnomalyHistory.jsx
+│   │   ├── Analytics.jsx
+│   │   ├── VehicleManage.jsx
+│   │   ├── Maintenance.jsx
+│   │   └── LiveMap.jsx
+│   ├── components/
+│   │   ├── layout/Navbar.jsx
+│   │   ├── dashboard/VehicleCard.jsx
+│   │   ├── charts/SensorLineChart.jsx
+│   │   └── ui/Modal.jsx
+│   └── services/api.js
 ├── 🐳 docker-compose.yml
 ├── 📄 .env.example
 └── 🔒 .gitignore
@@ -640,17 +579,13 @@ autosense/
 
 ## 📜 License
 
-```
-MIT License — see LICENSE for details.
-```
+MIT License — see [LICENSE](LICENSE) for details.
 
 ---
 
 <div align="center">
 
-```
-Built with ❤️ by Anshika Jain
-```
+*Built with ❤️ by Anshika Jain*
 
 ![Made with Python](https://img.shields.io/badge/Made%20with-Python-3776AB?style=flat-square&logo=python)
 ![Made with C++](https://img.shields.io/badge/Made%20with-C++-00599C?style=flat-square&logo=c%2B%2B)
