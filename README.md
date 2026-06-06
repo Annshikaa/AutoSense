@@ -1,34 +1,26 @@
 <div align="center">
+ █████╗ ██╗   ██╗████████╗ ██████╗ ███████╗███████╗███╗   ██╗███████╗███████╗
+██╔══██╗██║   ██║╚══██╔══╝██╔═══██╗██╔════╝██╔════╝████╗  ██║██╔════╝██╔════╝
+███████║██║   ██║   ██║   ██║   ██║███████╗█████╗  ██╔██╗ ██║███████╗█████╗  
+██╔══██║██║   ██║   ██║   ██║   ██║╚════██║██╔══╝  ██║╚██╗██║╚════██║██╔══╝  
+██║  ██║╚██████╔╝   ██║   ╚██████╔╝███████║███████╗██║ ╚████║███████║███████╗
+╚═╝  ╚═╝ ╚═════╝    ╚═╝    ╚═════╝ ╚══════╝╚══════╝╚═╝  ╚═══╝╚══════╝╚══════╝
+Edge AI · Vehicle Anomaly Detection · Real-Time Full Stack System
 
-```
-                              █████╗ ██╗   ██╗████████╗ ██████╗ ███████╗███████╗███╗   ██╗███████╗███████╗
-                              ██╔══██╗██║   ██║╚══██╔══╝██╔═══██╗██╔════╝██╔════╝████╗  ██║██╔════╝██╔════╝
-                              ███████║██║   ██║   ██║   ██║   ██║███████╗█████╗  ██╔██╗ ██║███████╗█████╗  
-                              ██╔══██║██║   ██║   ██║   ██║   ██║╚════██║██╔══╝  ██║╚██╗██║╚════██║██╔══╝  
-                              ██║  ██║╚██████╔╝   ██║   ╚██████╔╝███████║███████╗██║ ╚████║███████║███████╗
-                              ╚═╝  ╚═╝ ╚═════╝    ╚═╝    ╚═════╝ ╚══════╝╚══════╝╚═╝  ╚═══╝╚══════╝╚══════╝
-```
+Show Image
+Show Image
+Show Image
+Show Image
+Show Image
+Show Image
+Show Image
+Show Image
 
-### Edge AI · Vehicle Anomaly Detection · Real-Time Full Stack System
 
----
-
-![C++](https://img.shields.io/badge/C++17-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
-![Python](https://img.shields.io/badge/Python_3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![React](https://img.shields.io/badge/React_18-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-
----
-
-> **AutoSense** is a production-grade, real-time vehicle health monitoring system.  
-> A C++ ECU simulator streams live sensor telemetry over UDP to a Python edge-AI pipeline  
-> running dual-model anomaly detection — which forwards results to a FastAPI backend  
-> and a live React dashboard updated instantly via WebSocket.
-
+AutoSense is a production-grade, real-time vehicle health monitoring system.
+A C++ ECU simulator streams live sensor telemetry over UDP to a Python edge-AI pipeline
+running dual-model anomaly detection — which forwards results to a FastAPI backend
+and a live React dashboard updated instantly via WebSocket.
 ---
 
 </div>
